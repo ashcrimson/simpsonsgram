@@ -16,7 +16,7 @@
                         <input id="caption" 
                             type="text" 
                             class="form-control @error('caption') is-invalid @enderror" 
-                            caption="caption" 
+                            name="caption"
                             value="{{ old('caption') }}"  
                             autocomplete="caption" autofocus>
 
@@ -37,9 +37,8 @@
                     <input type="file" class="form-control-file" id="image" name="image">
 
                         @error('image')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
+                            
+                                <strong>{{ $message }}</strong> 
                         @enderror
                 
                 </div>
